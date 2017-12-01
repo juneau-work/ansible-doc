@@ -50,7 +50,7 @@ EOF
 ansible -i hosts.ini all -m shell -a 'echo root:root|chpasswd'
 ```
 说明: 对于需要密码的sudo用户，需传入 **\-\-ask-become-pass** 来手动输入sudo密码。  
-特别地，对NOPASSWD sudo用户传入 **\-\-ask-become-pass** 提示***SUDO password:*** 时可直接**回车**
+特别地，对NOPASSWD sudo用户传入 **\-\-ask-become-pass** 提示 ***SUDO password:*** 时可直接**回车**
 ```
 ansible -i hosts.ini all -m shell -a 'echo root:root|chpasswd' \
 --user=admin \
